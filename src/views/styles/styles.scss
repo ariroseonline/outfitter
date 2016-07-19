@@ -8,6 +8,9 @@
 "~minx/src/reset",
 "~minx/src/elements";
 
+@import "~bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap/bootstrap";
+
 @import
 "grid",
 'button',
@@ -22,6 +25,7 @@
 
 html {
   overflow-y: scroll;
+  font-size: initial;
 }
 
 body {

@@ -37,7 +37,7 @@ export class App extends Component {
           signOut={this.props.signOut}
         />
 
-        <main className="main">{this.props.children}</main>
+        <main role="main" className="main">{this.props.children}</main>
       </div>
     );
   }

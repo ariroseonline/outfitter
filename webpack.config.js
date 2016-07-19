@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 3000;
 //---------------------------------------------------------
 const loaders = {
   js: {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-  scss: {test: /\.scss$/, loader: 'style!css!postcss!sass'}
+  scss: {test: /\.scss$/, loader: 'style!css?sourceMap!postcss?sourceMap!sass?sourceMap'}
 };
 
 
@@ -44,8 +44,15 @@ config.resolve = {
 config.plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
-  })
+  }),
+
+ new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery"
+      })
 ];
+
+
 
 config.postcss = [
   autoprefixer({ browsers: ['last 3 versions'] })
@@ -143,7 +150,8 @@ if (ENV_PRODUCTION) {
   config.module = {
     loaders: [
       loaders.js,
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css?-autoprefixer!postcss!sass')}
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css?-autoprefixer!postcss!sass')},
+
     ]
   };
 

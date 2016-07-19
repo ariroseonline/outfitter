@@ -1,5 +1,5 @@
 
-var  tags = {
+var tags = {
   outfits: {
     label: "Outfits",
     items: [
@@ -85,7 +85,6 @@ var  tags = {
       }
     ]
   }
-
 }
 
 export default tags;

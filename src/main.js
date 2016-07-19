@@ -7,7 +7,10 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import { initAuth } from './core/auth';
 import configureStore from './core/store';
 import Root from './views/root';
+
+import "bootstrap-sass";
 import './views/styles/styles.scss';
+
 
 
 const store = configureStore();
