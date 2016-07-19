@@ -1,15 +1,15 @@
 {
-  "name": "todo-react-redux",
-  "version": "0.6.0",
-  "description": "Todo app with React, Redux, and Firebase",
-  "homepage": "https://github.com/r-park/todo-react-redux",
+  "name": "outfitter",
+  "version": "0.0.1",
+  "description": "No-thought clothing bot.",
+  "homepage": "https://github.com/ariroseonline/outfitter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/r-park/todo-react-redux.git"
+    "url": "https://github.com/ariroseonline/outfitter.git"
   },
   "author": {
-    "name": "Richard Park",
-    "email": "objectiv@gmail.com"
+    "name": "Ari Rose",
+    "email": "ari@ari-rose.com"
   },
   "license": "MIT",
   "private": true,
@@ -38,6 +38,7 @@
     "babel-preset-es2015": "~6.9.0",
     "babel-preset-react": "~6.11.1",
     "babel-preset-stage-0": "~6.5.0",
+    "bootstrap-sass": "^3.3.6",
     "classnames": "~2.2.5",
     "cross-env": "~1.0.8",
     "css-loader": "~0.23.1",
@@ -51,6 +52,7 @@
     "html-webpack-plugin": "~2.22.0",
     "immutable": "~3.8.1",
     "jasmine-core": "~2.4.1",
+    "jquery": "^2.2.4",
     "karma": "~1.0.0",
     "karma-chrome-launcher": "~1.0.1",
     "karma-jasmine": "~1.0.2",

@@ -1,27 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {Link} from 'react-router';
 
 var ItemGrid = React.createClass({
-	renderItems(items) {
-	
-		return items.map((item, i)=>{
-			return (
-				<Link key={i} to={`/outfit/`}>
-					<figure>
-						<img src={item.image} />
-						<figcaption>{item.label}</figcaption>
-					</figure>
-				</Link>
-			)
-		});
-	},
+  propType: {
+    items: React.PropTypes.array
+  },
+
+  renderItems(items) {
+    return items.map((item, i)=> {
+      return (
+          <Link key={i} to={`/outfit/`} className="grid-item">
+            <figure>
+              <img className="grid-item__image" src={item.image}/>
+              <figcaption>{item.label}</figcaption>
+            </figure>
+          </Link>
+      );
+    });
+  },
+
+  renderGhostItem() {
+    let itemType = 'outfit';
+    return (
+        <Link to="/outfits/new">
+          <img className="grid-item__image" src={`http://placehold.it/300x300?text=New+${itemType.toUpperCase()}`}/>
+        </Link>
+    );
+  },
 
   render() {
-  	return (
-  		<div>
-  			{this.renderItems(this.props.items)}
-  		</div>
-  	)
+    return (
+        <div className="item-grid">
+          {this.renderItems(this.props.items)}
+          {this.renderGhostItem()}
+        </div>
+    );
   }
 });
 

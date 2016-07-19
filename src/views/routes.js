@@ -1,16 +1,21 @@
 import { isAuthenticated } from 'src/core/auth';
 import App from './app';
+import Home from './pages/home';
 import SignIn from './pages/sign-in';
 import Outfits from './pages/outfits';
 import Outfit from './pages/outfit';
-import Articles from './pages/articles';
-import Article from './pages/article';
-import Weathers from './pages/weathers';
-import Weather from './pages/weather';
-import Temperatures from './pages/temperatures';
-import Temperature from './pages/temperature';
-import Activities from './pages/activities';
-import Activity from './pages/activity';
+import FilterType from './pages/filter-type';
+import Filter from './pages/filter';
+import NewFilter from './pages/new-filter';
+
+// import Articles from './pages/articles';
+// import Article from './pages/article';
+// import Weathers from './pages/weathers';
+// import Weather from './pages/weather';
+// import Temperatures from './pages/temperatures';
+// import Temperature from './pages/temperature';
+// import Activities from './pages/activities';
+// import Activity from './pages/activity';
 
 
 export const paths = {
@@ -18,14 +23,23 @@ export const paths = {
   SIGN_IN: '/sign-in',
   OUTFITS: '/outfits',
   OUTFIT: '/outfit',
-  ARTICLES: '/articles',
-  ARTICLE: '/article',
-  WEATHERS: '/weathers',
-  WEATHER: '/weather',
-  TEMPERATURES: '/temperatures',
-  TEMPERATURE: '/temperature',
-  ACTIVITIES: '/activities',
-  ACTIVITY: '/activity'
+  FILTER_TYPE: '/filters/:filterType',
+  FILTER: '/filters/:filterType/:filterName',
+  NEW_FILTER: '/filters/:filterType/new'
+
+  // NEW_OUTFIT: '/outfits/new',
+  // ARTICLES: '/articles',
+  // ARTICLE: '/article',
+  // NEW_ARTICLE: '/articles/new',
+  // WEATHERS: '/weathers',
+  // WEATHER: '/weather',
+  // NEW_WEATHER: '/weathers/new',
+  // TEMPERATURES: '/temperatures',
+  // TEMPERATURE: '/temperature',
+  // NEW_TEMPERATURE: '/temperatures/new',
+  // ACTIVITIES: '/activities',
+  // ACTIVITY: '/activity',
+  // NEW_ACTIVITY: '/activities/new'
 };
 
 
@@ -51,10 +65,17 @@ export const getRoutes = getState => {
     path: paths.ROOT,
     component: App,
     childRoutes: [
+      // {
+      //   indexRoute: {
+      //     component: Outfits,
+      //     onEnter: requireAuth(getState)
+      //   }
+      // },
+
       {
         indexRoute: {
-          component: Outfits,
-          onEnter: requireAuth(getState)
+          component: Home,
+          onEnter: requireUnauth(getState)
         }
       },
       {
@@ -71,52 +92,72 @@ export const getRoutes = getState => {
       {
         path: paths.OUTFIT,
         component: Outfit,
-          onEnter: requireAuth(getState)
-      },
-
-      {
-        path: paths.ARTICLES,
-        component: Articles,
-          onEnter: requireAuth(getState)
+        onEnter: requireAuth(getState)
       },
       {
-        path: paths.ARTICLE,
-        component: Article,
-          onEnter: requireAuth(getState)
-      },
-
-       {
-        path: paths.WEATHERS,
-        component: Weathers,
-          onEnter: requireAuth(getState)
-      },
-       {
-        path: paths.WEATHER,
-        component: Weather,
-          onEnter: requireAuth(getState)
-      },
-
-       {
-        path: paths.TEMPERATURES,
-        component: Temperatures,
-          onEnter: requireAuth(getState)
-      },
-       {
-        path: paths.TEMPERATURE,
-        component: Temperature,
-          onEnter: requireAuth(getState)
-      },
-
-      {
-        path: paths.ACTIVITIES,
-        component: Activities,
-          onEnter: requireAuth(getState)
+        path: paths.FILTER_TYPE,
+        component: FilterType,
+        onEnter: requireAuth(getState)
       },
       {
-        path: paths.ACTIVITY,
-        component: Activity,
-          onEnter: requireAuth(getState)
+        path: paths.FILTER,
+        component: Filter,
+        onEnter: requireAuth(getState)
+      },
+      {
+        path: paths.NEW_FILTER,
+        component: NewFilter,
+        onEnter: requireAuth(getState)
       }
+      //
+      // {
+      //   path: paths.ARTICLES,
+      //   component: Articles,
+      //     onEnter: requireAuth(getState)
+      // },
+      // {
+      //   path: paths.ARTICLE,
+      //   component: Article,
+      //     onEnter: requireAuth(getState)
+      // },
+      //
+      //  {
+      //   path: paths.WEATHERS,
+      //   component: Weathers,
+      //     onEnter: requireAuth(getState)
+      // },
+      //  {
+      //   path: paths.WEATHER,
+      //   component: Weather,
+      //     onEnter: requireAuth(getState)
+      // },
+      //
+      //  {
+      //   path: paths.TEMPERATURES,
+      //   component: Temperatures,
+      //     onEnter: requireAuth(getState)
+      // },
+      //  {
+      //   path: paths.TEMPERATURE,
+      //   component: Temperature,
+      //     onEnter: requireAuth(getState)
+      // },
+      //
+      // {
+      //   path: paths.ACTIVITIES,
+      //   component: Activities,
+      //     onEnter: requireAuth(getState)
+      // },
+      // {
+      //   path: paths.ACTIVITY,
+      //   component: Activity,
+      //     onEnter: requireAuth(getState)
+      // },
+      // {
+      //   path: paths.NEW_ACTIVITY,
+      //   component: Activity,
+      //     onEnter: requireAuth(getState)
+      // }
 
     ]
   };

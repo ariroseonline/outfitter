@@ -47,10 +47,16 @@
   float: right;
   padding: 8px 0;
   line-height: 24px;
+  font-size: .875rem;
 
   li {
     float: left;
     list-style: none;
+
+    &.active {
+      color: #fff;
+      font-weight: 900;
+    }
 
     &:last-child {
       margin-left: 12px;

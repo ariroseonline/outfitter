@@ -1,0 +1,13 @@
+.item-grid {
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-item {
+  width: 30%;
+}
+
+.grid-item__image {
+  width: 100%;
+}

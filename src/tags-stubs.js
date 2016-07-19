@@ -4,16 +4,16 @@ var tags = {
     label: "Outfits",
     items: [
       {
-        label: "Tshirt",
-        image: "http://placehold.it/100x100"
+        label: "Fruity Pebbles",
+        image: "http://placehold.it/300x300?text=Fruity+Pebbles"
       },
       {
-        label: "Socks",
-        image: "http://placehold.it/100x100"
+        label: "Zone Four",
+        image: "http://placehold.it/300x300?text=Zone+4"
       },
       {
-        label: "Shoes",
-        image: "http://placehold.it/100x100"
+        label: "Q-Bit",
+        image: "http://placehold.it/300x300?text=Q-Bit"
       }
     ]
   },
@@ -22,15 +22,15 @@ var tags = {
     items: [
       {
         label: "Tshirt",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=T-Shirt"
       },
       {
         label: "Socks",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Socks"
       },
       {
         label: "Shoes",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Shoes"
       }
     ]
   },
@@ -39,15 +39,15 @@ var tags = {
     items: [
       {
         label: "0-15",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=0-15"
       },
       {
         label: "15-30",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=15-30"
       },
       {
         label: "30-45",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=30-45"
       }
     ]
   },
@@ -56,15 +56,15 @@ var tags = {
     items: [
       {
         label: "Sunny",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Sunny"
       },
       {
         label: "Raining",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Snowy"
       },
       {
         label: "Snowing",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Rainy"
       }
     ]
   },
@@ -73,15 +73,15 @@ var tags = {
     items: [
       {
         label: "Casual Office",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Casual+Office"
       },
       {
         label: "Beach Day",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Beach+Day"
       },
       {
         label: "Museum Visit",
-        image: "http://placehold.it/100x100"
+        image: "http://placehold.it/300x300?text=Museum+Visit"
       }
     ]
   }

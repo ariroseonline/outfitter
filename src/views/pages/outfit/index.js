@@ -4,15 +4,15 @@ import tags from 'src/tags-stubs';
 
 var selectedTags = [tags.articles, tags.temperatures, tags.activities, tags.weathers];
 
-var Outfit = React.createClass({
+let Outfit = React.createClass({
   render() {
-  	return (
-  		<div>
-	  		<h1>Outfit Name</h1>
-	      <img src="http://placehold.it/300x300" />
-	      <RelatedTags tags={selectedTags} />
-	    </div>
-  	)
+    return (
+        <div>
+          <h1>Outfit Name</h1>
+          <img src="http://placehold.it/300x300" />
+          <RelatedTags tags={selectedTags} />
+        </div>
+    );
   }
 });
 
