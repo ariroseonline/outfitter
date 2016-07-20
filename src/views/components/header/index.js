@@ -5,15 +5,15 @@ import { Link } from 'react-router';
 const Header = ({authenticated, signOut}) => {
   return (
     <header className="header">
-      <div className="row">
-        <div className="col-xs-12">
+      <div className="grid-1">
+        <div className="col">
           <Link to="/"><h1 className="header__title">Outfitter</h1></Link>
           <ul className="header__nav">
             <NavLink to="/outfits">Outfits</NavLink>
-            <NavLink to="/filters/articles">Items</NavLink>
-            <NavLink to="/filters/temperatures">Temperature</NavLink>
-            <NavLink to="/filters/weathers">Weather</NavLink>
-            <NavLink to="/filters/activities">Activities</NavLink>
+            <NavLink to="/tags/articles">Items</NavLink>
+            <NavLink to="/tags/temperatures">Temperature</NavLink>
+            <NavLink to="/tags/weathers">Weather</NavLink>
+            <NavLink to="/tags/activities">Activities</NavLink>
           </ul>
           <ul className="header__actions">
             {authenticated ? <li><button className="btn" onClick={signOut}>Sign out</button></li> : <li><NavLink to="/sign-in">Sign In</NavLink></li>}

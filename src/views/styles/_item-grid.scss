@@ -1,13 +1,14 @@
 .item-grid {
   clear: both;
-  display: flex;
-  justify-content: space-between;
+  //display: flex;
+  //justify-content: space-between;
+  //flex-wrap: wrap;
 }
 
-.grid-item {
-  width: 30%;
+.item {
+  //width: 30%;
 }
 
-.grid-item__image {
+.item__image {
   width: 100%;
 }

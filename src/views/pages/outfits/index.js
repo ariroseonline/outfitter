@@ -1,14 +1,12 @@
 import React from 'react';
 import ItemGrid from '../../components/item-grid';
-import tags from 'src/tags-stubs';
+import outfits from 'src/outfits-stubs';
 
 let Outfits = React.createClass({
   render() {
     return (
         <div className="page">
-          <h1>Outfits</h1>
-          <button className="add-btn">Add</button>
-          <ItemGrid items={tags.outfits.items}/>
+          <ItemGrid items={outfits}/>
         </div>
     );
   }

@@ -4,9 +4,10 @@ import Home from './pages/home';
 import SignIn from './pages/sign-in';
 import Outfits from './pages/outfits';
 import Outfit from './pages/outfit';
-import FilterType from './pages/filter-type';
-import Filter from './pages/filter';
-import NewFilter from './pages/new-filter';
+import NewOutfit from './pages/new-outfit';
+import TagType from './pages/tag-type';
+import Tag from './pages/tag';
+import NewTag from './pages/new-tag';
 
 // import Articles from './pages/articles';
 // import Article from './pages/article';
@@ -23,9 +24,10 @@ export const paths = {
   SIGN_IN: '/sign-in',
   OUTFITS: '/outfits',
   OUTFIT: '/outfit',
-  FILTER_TYPE: '/filters/:filterType',
-  FILTER: '/filters/:filterType/:filterName',
-  NEW_FILTER: '/filters/:filterType/new'
+  NEW_OUTFIT: '/outfits/new',
+  TAG: '/tags/:tagType/:tagName',
+  TAG_TYPE: '/tags/:tagType',
+  NEW_TAG: '/tags/:tagType/new'
 
   // NEW_OUTFIT: '/outfits/new',
   // ARTICLES: '/articles',
@@ -95,18 +97,24 @@ export const getRoutes = getState => {
         onEnter: requireAuth(getState)
       },
       {
-        path: paths.FILTER_TYPE,
-        component: FilterType,
+        path: paths.NEW_OUTFIT,
+        component: NewOutfit,
+        onEnter: requireAuth(getState)
+      },
+
+      {
+        path: paths.TAG,
+        component: Tag,
         onEnter: requireAuth(getState)
       },
       {
-        path: paths.FILTER,
-        component: Filter,
+        path: paths.TAG_TYPE,
+        component: TagType,
         onEnter: requireAuth(getState)
       },
       {
-        path: paths.NEW_FILTER,
-        component: NewFilter,
+        path: paths.NEW_TAG,
+        component: NewTag,
         onEnter: requireAuth(getState)
       }
       //

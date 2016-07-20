@@ -1,32 +1,26 @@
 import React from 'react';
+import ItemGrid from '../../components/item-grid';
 
 var RelatedTags = React.createClass({
-	renderTagItem(tagItem, i) {
-		return (
-			<figure key={i}>
-				<img src={tagItem.image} />
-				<figcaption>{tagItem.label}</figcaption>
-			</figure>
-		)
-	},
-
-	renderTag(tag, i) {
-		return (
-			<div key={i}>
-				<h2>{tag.label}</h2>
-				{tag.items.map((tagItem, i)=>{
-					return this.renderTagItem(tagItem, i);
-				})}	
-			</div>
-		)
-	},
+  propTypes: {
+    tagTypes: React.PropTypes.array
+  },
 
   render() {
-  	var tags = this.props.tags.map((tag, i)=>{
-  		return this.renderTag(tag, i);
-  	});
-  	return <div>{tags}</div>
-  	
+    var tagTypes = this.props.tagTypes.map((tagType, i) => {
+      return (
+          <div key={i}>
+            <h2>{tagType.label}</h2>
+            <ItemGrid items={tagType.tags} />
+          </div>
+      );
+    });
+    return (
+        <div>
+          <h1>Related</h1>
+          {tagTypes}
+        </div>);
+
   }
 });
 
